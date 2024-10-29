@@ -11,7 +11,10 @@ const TeacherPage = () => {
                 <div className="h-full bg-white p-4 rounded-md">
                     <h1 className="font-semibold text-xl">Schedule</h1>
                     <BigCalendar />
-                </div>
+                </div>mk;khi[\\][
+
+                    /hyfg
+                ]
             </div>
             {/* Right  */}
             <div className="w-full xl:w-1/3 flex flex-col gap-8">
