@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModals"
 import Pagination from "@/components/pagination"
 import Table from "@/components/Table"
 import TableSearch from "@/components/TableSearch"
@@ -44,9 +45,11 @@ const SubjectListPage = () => {
                         <Image src="/edit.png" alt="" width={16} height={16}/>
                     </button>
                     </Link>
-                    {role === "admin" && (<button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
-                        <Image src="/delete.png" alt="" width={16} height={16}/>
-                    </button>)}
+                    {role === "admin" && (
+                        <>
+                        <FormModal table="subject" type="update" data={item} />
+                        </>
+                    )}
                     
                 </div>
             </td>

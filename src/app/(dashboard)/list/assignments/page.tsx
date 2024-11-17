@@ -10,7 +10,7 @@ type Assignment = {
     subject:string;
     class:string;
     teacher:string;
-    dueDate:string;
+    dueDate :string;
 }
 
 const columns = [
