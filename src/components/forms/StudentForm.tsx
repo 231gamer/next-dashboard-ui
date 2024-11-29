@@ -15,9 +15,9 @@ const schema = z.object({
     password: z.string().min(4, {message : 'Password must be at least 4 characters long!'}),
     firstName: z.string().min(1, {message : 'First name is required'}),
     lastName: z.string().min(1, {message : 'Last name is required'}),
-    phone: z.string().min(9, {message : 'Phone is required'}),
+    phone: z.string().optional(),
     address: z.string().min(5, {message : 'Address is required'}),
-    bloodType: z.string().min(1, {message : 'Blood Type is required'}),
+    bloodType: z.string().optional(),
     birthday: z.date({ message : "Birthday is required"}),
     sex: z.enum(["male", "female"], {message: "Sex is required"}),
     img: z.instanceof(File, {message: "Image is required"})
@@ -25,7 +25,7 @@ const schema = z.object({
 
 type Inputs = z.infer<typeof schema>;
 
-const TeacherForm = ({
+const StudentForm = ({
     type, 
     data
 }: {
@@ -47,7 +47,7 @@ const TeacherForm = ({
 
     return (
         <form className="flex flex-col gap-8" onSubmit={onSubmit}>
-            <h1 className="text-xl font-semibold">Create a new Teacher</h1>
+            <h1 className="text-xl font-semibold">Create a new Student</h1>
                 <span className="text-xs text-gray-400 font-medium">Authentication Information</span>
             <div className="flex  justify-between flex-wrap gap-4">
             <InputField 
@@ -142,4 +142,4 @@ const TeacherForm = ({
     )
 }
 
-export default TeacherForm
+export default StudentForm

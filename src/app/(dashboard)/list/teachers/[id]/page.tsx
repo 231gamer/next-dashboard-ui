@@ -1,5 +1,6 @@
 import Announcements from "@/components/Announcements"
 import BigCalendar from "@/components/BigCalendar"
+import FormModal from "@/components/FormModals"
 import Performance from "@/components/Performance"
 import Image from "next/image"
 import Link from "next/link"
@@ -17,7 +18,23 @@ const SingleTeacherPage = () => {
                             <Image src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" width={144} height={144} className="w-36 h-36 rounded-full object-cover"/>
                         </div>
                         <div className="w-2/3 flex flex-col justify-between gap-4">
+                        <div className="flex items-center gap-4">
                             <h1 className="text-xl font-semibold">Moisema Dukuly</h1>
+                            <FormModal table="teacher" type="update" data={{
+                                    id: 1,
+                                    teacherId: "1234567890",
+                                    fistName: "Moisema",
+                                    lastName: "Dukuly",
+                                    email: "john@doe.com",
+                                    photo:
+                                      "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                                    phone: "1234567890",
+                                    subjects: ["Math", "Geometry"],
+                                    classes: ["1B", "2A", "3C"],
+                                    address: "123 Main St, Anytown, USA",
+                                  }}
+                                />
+                        </div>
                             <p className="text-sm text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ut.</p>
                             <div className="flex items-center justify-between gap-2 flex-wrap text-xs font-medium">
                                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
